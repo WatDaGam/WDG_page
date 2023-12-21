@@ -29,7 +29,7 @@ jobs:
           touch out/.nojekyll
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.5
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.CHANWOONG1 }}
           BRANCH: public # The branch the action will deploy to

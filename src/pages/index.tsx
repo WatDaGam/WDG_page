@@ -46,14 +46,14 @@ const IndexPage: React.FC<PageProps> = () => {
       <img src="/web_image1.png" alt="image1" className="image" data-fade-in />
       <h1 className="description">당신의 마음에도 왔다감</h1>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/web_image2.png" alt="image2" className="image" data-fade-in />
+      <img src="/web_image3.png" alt="image3" className="image" data-fade-in />
       <h1 className="description">당신이 머물렀던 곳을 공유해보세요</h1>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/web_image3.png" alt="image3" className="image" data-fade-in />
+      <img src="/web_image2.png" alt="image2" className="image" data-fade-in />
     </div>
   )
 }
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <title>왔다감 - WDG</title>

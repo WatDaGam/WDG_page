@@ -4,7 +4,7 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
-  assetPrefix: 'https://github.com/WatDaGam/WatDaGam.github.io',
+  assetPrefix: 'https://WatDaGam.github.io',
   output: 'export',
 };
 

@@ -5,7 +5,7 @@ const nextConfig = {
     path: '',
   },
   assetPrefix: 'https://github.com/WatDaGam/WDG_page',
-  output: 'standalone',
+  output: 'export',
 };
 
 module.exports = nextConfig

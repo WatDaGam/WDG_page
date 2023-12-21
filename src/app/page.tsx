@@ -1,9 +1,9 @@
 "use client";
 import Image from 'next/image';
 import styles from './page.module.css'
-import image1 from '@/assets/images/web_image1.png'
-import image2 from '@/assets/images/web_image2.png'
-import image3 from '@/assets/images/web_image3.png'
+import image1 from '@static/web_image1.png'
+import image2 from '@static/web_image2.png'
+import image3 from '@static/web_image3.png'
 import { useEffect } from 'react';
 
 export default function Home() {

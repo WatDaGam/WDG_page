@@ -2,7 +2,7 @@
 const nextConfig = {
   images: {
     loader: 'akamai',
-    path: 'https://WatDaGam.github.io',
+    path: '',
   },
   assetPrefix: 'https://WatDaGam.github.io',
   output: 'export',

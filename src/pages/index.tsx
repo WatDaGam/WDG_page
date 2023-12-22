@@ -1,6 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { Helmet } from 'react-helmet';
+import { Link } from 'gatsby';
 
 const styles = {
   description: {
@@ -50,6 +51,26 @@ const IndexPage: React.FC<PageProps> = () => {
       <h1 className="description">당신이 머물렀던 곳을 공유해보세요</h1>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/web_image2.png" alt="image2" className="image" data-fade-in />
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-left">
+            <p>&copy; 2023 왔다감</p>
+            <Link to="/privacy">Privacy Policy</Link>
+          </div>
+          {/* <div class="footer-center">
+            <ul class="social-icons">
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+          </div> */}
+          <div className="footer-right">
+            <p>Contact Us: 서울특별시 강남구 개포동 416</p>
+            <p>Email: support@watdagam.com</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

@@ -58,11 +58,21 @@ var horizontalCardContainers = document.getElementsByClassName(
 var primaryCardContents = document.getElementsByClassName(
   'card-content-primary',
 );
+var bannerTitle = document.getElementById('banner-title');
+var bannerDescription = document.getElementById('banner-description');
+var pageContainer = document.getElementById('page_container');
+var sections = document.getElementsByClassName('section');
+var download = document.getElementById('download');
 
 function repositionContainers(width) {
   if (width >= 1280) {
     if (uiType == 'desktop') return;
 
+    bannerTitle.style.fontSize = '3rem';
+    bannerDescription.style.width = '60%';
+    pageContainer.style.padding = '0px 20px';
+    download.style.flexDirection = 'row';
+    download.style.gap = '40px';
     for (let i = 0; i < horizontalSectionContainers.length; i++) {
       horizontalSectionContainers[i].style.flexDirection = 'row';
     }
@@ -73,10 +83,18 @@ function repositionContainers(width) {
       primaryCardContents[i].style.width = 'auto';
       primaryCardContents[i].style.flexGrow = '1';
     }
+    for (let i = 0; i < sections.length; i++) {
+      sections[i].style.padding = '30px';
+    }
     uiType = 'desktop';
   } else if (width >= 810) {
     if (uiType == 'tablet') return;
 
+    bannerTitle.style.fontSize = '2.5rem';
+    bannerDescription.style.width = '70%';
+    pageContainer.style.padding = '0px 10px';
+    download.style.flexDirection = 'row';
+    download.style.gap = '20px';
     for (let i = 0; i < horizontalSectionContainers.length; i++) {
       horizontalSectionContainers[i].style.flexDirection = 'row';
     }
@@ -87,10 +105,18 @@ function repositionContainers(width) {
       primaryCardContents[i].style.width = '100%';
       primaryCardContents[i].style.flexGrow = '0';
     }
+    for (let i = 0; i < sections.length; i++) {
+      sections[i].style.padding = '20px';
+    }
     uiType = 'tablet';
   } else {
     if (uiType == 'mobile') return;
 
+    bannerTitle.style.fontSize = '2rem';
+    bannerDescription.style.width = '90%';
+    pageContainer.style.padding = '0px 0px';
+    download.style.flexDirection = 'column';
+    download.style.gap = '10px';
     for (let i = 0; i < horizontalSectionContainers.length; i++) {
       horizontalSectionContainers[i].style.flexDirection = 'column';
     }
@@ -100,6 +126,9 @@ function repositionContainers(width) {
     for (let i = 0; i < primaryCardContents.length; i++) {
       primaryCardContents[i].style.width = '100%';
       primaryCardContents[i].style.flexGrow = '0';
+    }
+    for (let i = 0; i < sections.length; i++) {
+      sections[i].style.padding = '10px';
     }
     uiType = 'mobile';
   }

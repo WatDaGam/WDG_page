@@ -1,0 +1,72 @@
+body {
+  margin: 5em 10%;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #EDEDED;
+  color: #000000;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+}
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 2;
+}
+
+#page_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+}
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+h4 {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+p, li {
+  margin: 0;
+}
+strong {
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+@counter-style korean-style {
+  system: fixed;
+  symbols: 가 나 다 라 마 바 사 아 자 차 카 타 파 하;
+  suffix: " ";
+}
+ol {
+  margin: 0;
+}
+ol.kor-list {
+  list-style: none;
+  counter-reset: custom-counter;
+}
+ol.kor-list > li {
+  counter-increment: custom-counter;
+}
+ol.kor-list > li::before {
+  content: counter(custom-counter, korean-style) ". ";
+}
+ol.num-brace-list {
+  list-style: none; /* Removes default numbering */
+  counter-reset: item; /* Creates a new instance of the counter */
+}
+ol.num-brace-list > li {
+  counter-increment: item; /* Increments the counter for each list item */
+}
+ol.num-brace-list > li:before {
+  content: counter(item) ") "; /* Adds the counter value and a parenthesis before the item content */
+}

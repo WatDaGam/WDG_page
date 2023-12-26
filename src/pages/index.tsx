@@ -38,7 +38,7 @@ const IndexPage: React.FC<PageProps> = () => {
   }, []);
 
   return (
-    <div style={{ overflowY: "hidden" }}>
+    <div style={{ overflowY: "hidden", display: "flex" }}>
       <Helmet>
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
